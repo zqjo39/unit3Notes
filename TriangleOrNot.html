@@ -60,7 +60,7 @@
                 return false;
             }
           return true;
-        }
+        };
 
         calculateButton.addEventListener('click', function(e) {
             let sideA = +a.value;
@@ -77,7 +77,7 @@
                 return;
             }
             ans.textContent = 'Inputs do NOT make a valid triangle.'
-        })
+        });
 
         clearButton.addEventListener('click', function(e) {
             a.value = " ";
@@ -85,7 +85,7 @@
             c.value = " ";
             ans.textContent = "";
             ans.classList.add("hidden");
-        })
+        });
     </script>
 </body>
 </html>

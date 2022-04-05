@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget gravida cum sociis natoque. Auctor urna nunc id cursus metus. Sodales ut etiam sit amet nisl purus in mollis. Integer quis auctor elit sed vulputate mi. A diam maecenas sed enim ut sem viverra. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Arcu non sodales neque sodales ut etiam sit amet nisl. Volutpat ac tincidunt vitae semper quis lectus nulla at. Habitant morbi tristique senectus et netus et. Tristique senectus et netus et malesuada.</p>
+        <div class="row">
+            <h3>Background</h3>
+            <input type="color" id="bg" value="#FFFFFF">
+        </div>
+        <div class="row">
+            <h3>Text!</h3>
+            <input type="color" id="txt">
+        </div>
+        <button id="clear">CLEAR</button>
+    </div>
+</div>
+
+
+
+<script>
+    const content = document.querySelector('.content');
+    const bg = document.getElementById('bg');
+    const txt = document.getElementById('txt');
+    const clear = document.getElementById('clear');
+
+    bg.addEventListener('change', function(e) {
+        content.style.backgroundColor = e.target.value;
+    });
+
+    txt.addEventListener('change', function(e) {
+        content.style.color = e.target.value;
+    });
+
+    clear.addEventListener('click', function(e) {
+        content.style.backgroundColor = 'white';
+        bg.value = '#FFFFFF';
+        content.style.color = 'black';
+        txt.value = '#000000';
+    });
+
+</script>
+
+</body>
+</html>

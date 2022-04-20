@@ -4,12 +4,55 @@
     <meta charset="UTF-8">
     <title>Hello, _____!</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <div class="content">
-
+        <div class="row">
+            <div>
+                <label for="first">First Name</label>
+                <input type="text" id="first">
+            </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label for="last">Last Name</label>
+                    <input type="text" id="last">
+                </div>
+            </div>
+        <button id="hello">Say Hello</button>
+        <p class="hidden"></p>
     </div>
 </div>
+
+    <script>
+        const firstName = document.getElementById('first');
+        const lastName = document.getElementById('last');
+        const full = document.querySelector('p')
+
+        const helloButton = document.getElementById('hello')
+
+        function sayHello() {
+            let first = firstName.value;
+            let last = lastName.value;
+            let fullName = `${first} ${last}`;
+            if (fullName.length > 1) {
+                full.classList.remove("hidden")
+            } else {
+                full.classList.add("hidden")
+            }
+            full.textContent = `Hello ${fullName}!`
+        }
+
+
+
+        helloButton.addEventListener('click', sayHello);
+
+    </script>
 </body>
 </html>

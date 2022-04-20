@@ -15,25 +15,26 @@
                 </div>
             </div>
             <button id="add">Add Item</button>
+            <ul>
 
+            </ul>
         </div>
     </div>
 
     <script>
-        //
-        //
-       const myList = document.querySelector('ul')
+        const item = document.getElementById('item')
+        const addButton = document.getElementById('add')
+        const myList = document.querySelector('ul')
 
         function addItem() {
-            //
-            //
+            let items = item.value;
             let newElement = document.createElement('li');
-            //
+            newElement.innerHTML = items;
             newElement.addEventListener('click', function(e) {
-                //
+                newElement.remove();
             });
             myList.appendChild(newElement)
-            //
+            item.value = "";
         }
         addButton.addEventListener('click', addItem)
     </script>

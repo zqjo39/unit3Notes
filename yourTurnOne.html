@@ -26,33 +26,32 @@
                 </div>
             </div>
         <button id="hello">Say Hello</button>
-        <p class="hidden"></p>
+        <div class="insert">
+
+        </div>
     </div>
 </div>
 
     <script>
+        const insert = document.querySelector('.insert');
         const firstName = document.getElementById('first');
         const lastName = document.getElementById('last');
-        const full = document.querySelector('p')
 
         const helloButton = document.getElementById('hello')
 
         function sayHello() {
+            const names = document.createElement('p');
             let first = firstName.value;
             let last = lastName.value;
             let fullName = `${first} ${last}`;
-            if (fullName.length > 1) {
-                full.classList.remove("hidden")
-            } else {
-                full.classList.add("hidden")
-            }
-            full.textContent = `Hello ${fullName}!`
+
+            names.innerHTML = `Hello ${fullName}!`;
+            insert.insertAdjacentElement('afterbegin', names);
+            firstName.value = "";
+            lastName.value = "";
         }
 
-
-
         helloButton.addEventListener('click', sayHello);
-
     </script>
 </body>
 </html>

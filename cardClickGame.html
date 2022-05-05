@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click Card Game!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cardList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .card {
+            width: 325px;
+            height: 400px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+        }
+        .active {
+            background-color: #3f5702;
+        }
+        .inactive {
+            background-color: #631308;
+            color: black;
+        }
+        .content {
+            width: 1400px;
+        }
+        .score {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="score">Score: 0</h1>
+            <div class="cardList">
+
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

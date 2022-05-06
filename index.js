@@ -1,5 +1,6 @@
 const cardList = document.querySelector('.cardList');
 const score = document.querySelector('.score');
+const reset = document.createElement('button');
 let scorer = 0;
 
 buildBoard();
@@ -29,6 +30,11 @@ cardList.addEventListener('click', function(e) {
     if (children.length < 1) {
         clearInterval(interval);
         console.log('You win!! :D')
+        reset.innerHTML = "RESET"
+        cardList.appendChild(reset);
+        reset.addEventListener('click', function(e) {
+            location.reload();
+        })
     }
 });
 
